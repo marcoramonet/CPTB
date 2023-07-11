@@ -1,7 +1,18 @@
 /**
  * Summary:
+    * time(NULL): returns the amount of seconds since 1970 jan 1, in time_t type.
+    * difftime(time_t a, time_t b): returns the difference in seconds between a and b.
+    * ctime(time_t t): returns a string describing the time of t.
+    * gmtime(time_t t): returns the Grenwich time given by t as a tm struct.
+    * asctime(tm t): Similar to ctime(). It returns a string describing the time given by the tm struct t.
+    * localtime(time_t t): Gives the tm struct describing the time given by t.
+    * mktime(tm t): takes a tm struct and returns the corresponding time_t
+    * strftime(): allows us to format the string that we output described by a tm struct.
+    * clock(): returns the amount of clock ticks since the begining of the program.
+    * CLOCKS_PER_SEC: is a constant value defined in time.h. It describes the amount of processor tics per second.
     * 
-*/
+    *  
+    * */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -119,7 +130,7 @@ int main(int argc, char **argv)
 
     /**
      * But, there are times that we will want to access the time values, not only the string, 
-     * like the day, the month, the time, etc.
+     * like the day, the month, the time in hours of the day, etc.
      * The function gmtime() function returns a struct of type tm which contains the values
      * of the time, given by the argument time_t passed as a pointer.
      * We could also see the function gmtime as casting a time_t value into tm.
