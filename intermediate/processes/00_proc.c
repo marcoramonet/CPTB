@@ -21,5 +21,14 @@ int main(int argc, char *argv[])
     fork();
     /** This will print twice. Once for each process*/
     printf("This is a process\n");
+
+    printf("\n");
+
+    /**
+     * The fork() function returns an int value.
+    */
+   
+
+
     return 0;
 }

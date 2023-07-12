@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
  * the terminal does not reset. 
  * IOW: the program waits for the child process to finish.
 */
-    // fork_n_wait("My mommy loves me");
+    fork_n_wait("My mommy loves me");
 
 
     
