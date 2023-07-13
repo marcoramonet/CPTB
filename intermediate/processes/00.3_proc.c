@@ -7,6 +7,14 @@
  * As an exercise let's make a program that prints 10 numbers, 
  * from 0 to 10. But the first 5 will be printed by the child process,
  * and the second 5 will be printed by the parent process.
+ * 
+ * The child process has different memory than the parent process, 
+ * but the variable values get copied when fork() is called.
+ * 
+ * After a fork() call the same code is executed by both processes,
+ * but with different results because of the pid value.
+ * 
+ * Every single process has a process id
 */
 
 void method_one() 
