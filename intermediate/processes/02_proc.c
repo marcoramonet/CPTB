@@ -9,7 +9,8 @@ int main(int argc, char *argv[])
     pid_t pid = fork();
     /**
      * getpid() returns the process id of the calling process.
-     * getppid() returns the process id of the parent process of the calling process.
+     * getppid() returns the process id of the parent process of the calling process. 
+     * NOTE: If we call getppid() and the parent process is terminated, the function getppid() returns 1.
     */
     printf("pid: %d\tparent pid: %d\n",
         getpid(), getppid());
