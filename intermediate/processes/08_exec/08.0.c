@@ -8,6 +8,7 @@
 /**
  * With the exec family of functions we can execute another program from our own program.
  * When we call an exec function the whole process gets replaced by the called program.
+ * A successful exec function never returns control because the calling process is overwritten with the new process.
  * The memory is replaced, the execution line too, everything.
  * BUT: We know how to create new processes, so we can use this to our advantage...
 */

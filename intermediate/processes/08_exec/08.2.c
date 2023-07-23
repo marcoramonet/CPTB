@@ -5,6 +5,7 @@
 #include <unistd.h>
 
 
+
 /**
  * We can access the return value of a program, that is 
  * the value the main function of a program returns.
@@ -68,4 +69,6 @@ int main(int argc, char *argv[])
  * Bibliography:
  * Getting exit status code in C: https://youtu.be/DiNmwwQWl0g
  * See the linux manual for wait: https://man7.org/linux/man-pages/man2/wait.2.html
+ * For the different exec functions in the exec family see: https://www.geeksforgeeks.org/exec-family-of-functions-in-c/
+ * ... and: man exec(3) in the terminal
 */
