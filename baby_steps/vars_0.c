@@ -34,6 +34,6 @@ int main()
     const int MY_NUM = 5;
 
     //This throws an error:
-    MY_NUM = MY_NUM + 1;
+    // MY_NUM = MY_NUM + 1;
 
 }
