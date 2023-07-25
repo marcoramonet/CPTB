@@ -42,7 +42,8 @@ int main(int argc, char *argv[])
         int file = open("pingout.txt", O_WRONLY | O_CREAT, 0777);
 
         /**
-         * The dup() function duplicates the file descriptor passed as a parameter. 
+         * The dup() function duplicates the file descriptor passed as a parameter and 
+         * sets it in the lowest available file descriptor. 
          * That is, it adds another file descriptor that gives access to the same 
          * file described by the file descriptor given as a parameter. After calling dup,
          * the file descriptor table would look something like:
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
         * When dup2 is called, it closes the B file descriptor and copies the A
         * descriptor to the position where B was.
         * So, by running dup2(file, STDOUT_FILENO) we're replacing the descriptor of STDOUT
-        * with the file descriptor, leaving us with the following file descriptor table:
+        * with the 'file' file descriptor, leaving us with the following file descriptor table:
             *  0 : STDIN
             *  1 : pingout.txt
             *  2 : STDERR

@@ -4,7 +4,8 @@
  * NOTE: input command: <man fopen> for more information. Other file I/O functions: fclose()
  * When we open a file we have a pointer to a memory address where the file is located in memory
  * 
- * When we use the 'w' mode on fopen() whatever text we write on the file will et overwritten.
+ * When we use the 'w' mode on fopen() whatever text we write on the file will be overwritten.
+ * When we use the 'a' mode on fopen(), text is appended to the preexisting text.
 */
 
 int main(int argc, char *argv[])
