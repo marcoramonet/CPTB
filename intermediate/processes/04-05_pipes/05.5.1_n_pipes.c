@@ -18,6 +18,8 @@ int main(int argc, char *argv[])
     scanf("%d", &inc_amt);
     const int NUM_PROC = inc_amt;
     const int NUM_PIPES = NUM_PROC + 1;
+    
+    pid_t pids[NUM_PROC];
 
     int fds[NUM_PIPES][FILDES_PER_PIPE];
 
@@ -29,7 +31,6 @@ int main(int argc, char *argv[])
         /**
          * i is the process index
         */
-        pid_t pids[NUM_PROC];
         pids[i] = fork();
         if (pids[i] == -1) { return 2; }
         if (pids[i] == 0) /** Child process */ {
